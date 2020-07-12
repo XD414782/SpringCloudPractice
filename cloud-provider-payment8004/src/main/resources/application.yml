@@ -1,0 +1,12 @@
+server:
+  port: 8004
+#服务别名----注册zookeeper到注册中心的名称
+spring:
+  application:
+    name: cloud-provider-payment
+  cloud:
+    zookeeper:
+      connect-string: 120.78.187.144:2181
+      discovery:
+        enabled: true   #是否启用zookeeper
+        register: true   #是否注册微服务

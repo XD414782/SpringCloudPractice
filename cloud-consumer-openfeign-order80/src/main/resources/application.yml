@@ -1,0 +1,12 @@
+server:
+  port: 80
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+#      熔断时间（在cloud-consumer-openfeign-order80中的OrderFeignController里的
+#               /consumer/payment/feign/timeout设置的睡眠3秒
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
